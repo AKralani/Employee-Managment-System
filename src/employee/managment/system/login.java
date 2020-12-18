@@ -5,6 +5,8 @@
  */
 package employee.managment.system;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
@@ -29,6 +31,10 @@ public class login extends javax.swing.JFrame {
     public login() {
         
         initComponents();
+        Toolkit toolkit = getToolkit();
+        Dimension size = toolkit.getScreenSize();
+        setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+        
         conn = db.java_db();
         currentDate();
         
