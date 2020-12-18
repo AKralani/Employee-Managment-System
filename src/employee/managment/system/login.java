@@ -9,6 +9,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  *
@@ -24,10 +27,30 @@ public class login extends javax.swing.JFrame {
      * Creates new form login
      */
     public login() {
+        
         initComponents();
         conn = db.java_db();
+        currentDate();
+        
     }
 
+    public void currentDate() {
+        
+        Calendar cal = new GregorianCalendar();
+        int month = cal.get(Calendar.MONTH);
+        int year = cal.get(Calendar.YEAR);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        
+        lbl_date.setText(day + "/" + (month + 1) + "/" + year);
+        
+        int second = cal.get(Calendar.SECOND);
+        int minute = cal.get(Calendar.MINUTE);
+        int hour = cal.get(Calendar.HOUR);
+        
+        lbl_time.setText(hour + ":" + (minute) + ":" + second);
+        
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,6 +68,10 @@ public class login extends javax.swing.JFrame {
         txt_password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        lbl_date = new javax.swing.JMenu();
+        lbl_time = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -89,6 +116,17 @@ public class login extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 526);
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        lbl_date.setText("Date");
+        jMenuBar1.add(lbl_date);
+
+        lbl_time.setText("Time");
+        jMenuBar1.add(lbl_time);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -202,7 +240,11 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenu lbl_date;
+    private javax.swing.JMenu lbl_time;
     private javax.swing.JTextField txt_password;
     private javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
