@@ -117,13 +117,13 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(0, 0, 790, 526);
 
-        jMenu1.setText("File");
+        jMenu1.setText("Datei");
         jMenuBar1.add(jMenu1);
 
-        lbl_date.setText("Date");
+        lbl_date.setText("Datum");
         jMenuBar1.add(lbl_date);
 
-        lbl_time.setText("Time");
+        lbl_time.setText("Zeit");
         jMenuBar1.add(lbl_time);
 
         setJMenuBar(jMenuBar1);
@@ -164,6 +164,8 @@ public class login extends javax.swing.JFrame {
             
             while (rs.next()) {
                 
+                int id = rs.getInt(1);
+                Emp.empId = id;
                 count = count + 1;
                 
             }

@@ -6,17 +6,17 @@
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="File"/>
+            <Property name="text" type="java.lang.String" value="Datei"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="lbl_date">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Date"/>
+            <Property name="text" type="java.lang.String" value="Datum"/>
           </Properties>
         </Menu>
         <Menu class="javax.swing.JMenu" name="lbl_time">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Time"/>
+            <Property name="text" type="java.lang.String" value="Zeit"/>
           </Properties>
         </Menu>
       </SubComponents>
