@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -43,63 +43,69 @@
                           <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel18" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txt_id" linkSize="2" alignment="0" pref="179" max="32767" attributes="0"/>
-                  <Component id="txt_firstname" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_surname" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_dob" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_email" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_tel" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txt_address" linkSize="2" alignment="0" pref="179" max="32767" attributes="0"/>
-                  <Component id="txt_add2" linkSize="2" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="r_male" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="r_female" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="txt_id" linkSize="2" alignment="0" pref="179" max="32767" attributes="0"/>
+                          <Component id="txt_firstname" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_surname" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_dob" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_email" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_tel" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txt_address" linkSize="2" alignment="0" pref="179" max="32767" attributes="0"/>
+                          <Component id="txt_add2" linkSize="2" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="r_male" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="r_female" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel10" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txt_status" linkSize="1" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
-                          <Component id="txt_job" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_salary" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_doj" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_design" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_dep" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_pc" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
-                          <Component id="txt_apt" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txt_status" linkSize="1" alignment="0" min="-2" pref="179" max="-2" attributes="0"/>
+                                  <Component id="txt_job" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_salary" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_doj" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_design" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_dep" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_pc" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                                  <Component id="txt_apt" linkSize="1" alignment="0" min="-2" pref="140" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="jButton1" linkSize="5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jButton2" linkSize="5" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="jButton1" linkSize="5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" linkSize="5" min="-2" max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="txt_search" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -113,7 +119,12 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txt_search" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -218,7 +229,7 @@
                   </Group>
                   <Component id="jDesktopPane1" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="116" max="32767" attributes="0"/>
+              <EmptySpace pref="89" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -412,6 +423,16 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel18">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mitarbeiter suchen:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txt_search">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_searchKeyReleased"/>
       </Events>
     </Component>
   </SubComponents>
