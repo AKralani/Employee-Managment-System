@@ -71,8 +71,8 @@ public class login extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txt_username = new javax.swing.JTextField();
-        txt_password = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        txt_password = new javax.swing.JPasswordField();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -92,22 +92,14 @@ public class login extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Nutzername:");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(10, 410, 62, 14);
+        jLabel5.setBounds(10, 410, 70, 14);
 
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Passwort:");
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(10, 450, 48, 14);
+        jLabel7.setBounds(10, 450, 60, 14);
         jPanel1.add(txt_username);
         txt_username.setBounds(90, 400, 230, 30);
-
-        txt_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_passwordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txt_password);
-        txt_password.setBounds(90, 440, 230, 30);
 
         jButton1.setText("Anmeldung");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -117,6 +109,8 @@ public class login extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
         jButton1.setBounds(220, 480, 100, 30);
+        jPanel1.add(txt_password);
+        txt_password.setBounds(90, 440, 230, 30);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/employee/managment/system/images/bk3.jpg"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -147,10 +141,6 @@ public class login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_passwordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -253,7 +243,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu lbl_date;
     private javax.swing.JMenu lbl_time;
-    private javax.swing.JTextField txt_password;
+    private javax.swing.JPasswordField txt_password;
     private javax.swing.JTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }
