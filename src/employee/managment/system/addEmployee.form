@@ -33,7 +33,7 @@
                           <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -76,10 +76,7 @@
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
-                                      <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="jLabel14" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel9" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel11" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel12" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -109,11 +106,20 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton4" alignment="0" min="-2" pref="137" max="-2" attributes="0"/>
-                  <Component id="jButton3" alignment="1" min="-2" pref="137" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jDesktopPane1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton4" linkSize="7" min="-2" pref="137" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jButton3" min="-2" pref="137" max="-2" attributes="0"/>
+                          <Component id="jButton5" linkSize="7" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -198,6 +204,7 @@
                                   <Component id="jButton1" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="jButton2" alignment="3" min="-2" pref="40" max="-2" attributes="0"/>
                                   <Component id="jButton4" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton5" linkSize="6" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -402,7 +409,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="img" pref="197" max="32767" attributes="0"/>
+                  <Component id="img" pref="260" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -446,6 +453,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Aktualisieren"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

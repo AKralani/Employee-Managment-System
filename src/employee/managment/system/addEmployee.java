@@ -95,6 +95,7 @@ public class addEmployee extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         txt_search = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,7 +181,7 @@ public class addEmployee extends javax.swing.JFrame {
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDesktopPane1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE)
+                .addComponent(img, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jDesktopPane1Layout.setVerticalGroup(
@@ -213,6 +214,13 @@ public class addEmployee extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setText("Aktualisieren");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -226,7 +234,7 @@ public class addEmployee extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(0, 20, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -261,9 +269,7 @@ public class addEmployee extends javax.swing.JFrame {
                                 .addGap(197, 197, 197))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addGap(44, 44, 44)
-                                        .addComponent(jLabel14))
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -286,10 +292,16 @@ public class addEmployee extends javax.swing.JFrame {
                     .addComponent(txt_search))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txt_apt, txt_dep, txt_design, txt_doj, txt_job, txt_pc, txt_salary, txt_status});
@@ -297,6 +309,8 @@ public class addEmployee extends javax.swing.JFrame {
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {txt_add2, txt_address, txt_dob, txt_email, txt_firstname, txt_id, txt_surname, txt_tel});
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton4, jButton5});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -362,7 +376,8 @@ public class addEmployee extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton4)))
+                                    .addComponent(jButton4)
+                                    .addComponent(jButton5)))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txt_dob, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
@@ -394,7 +409,7 @@ public class addEmployee extends javax.swing.JFrame {
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {txt_apt, txt_dep, txt_design, txt_doj, txt_job, txt_pc, txt_salary, txt_status});
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton3, jButton4});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton3, jButton4, jButton5});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -645,6 +660,51 @@ public class addEmployee extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        
+        try {
+            
+            String val = txt_firstname.getText();
+            String val2 = txt_surname.getText();
+            String val3 = txt_dob.getText();
+            String val4 = txt_id.getText();
+            String val5 = txt_email.getText();
+            String val6 = txt_tel.getText();
+            String val7 = txt_address.getText();
+            String val8 = txt_dep.getText();
+            String val9 = txt_add2.getText();
+            String val10 = txt_apt.getText();
+            String val11 = txt_pc.getText();
+            String val12 = txt_design.getText();
+            String val13 = txt_status.getText();
+            String val14 = txt_salary.getText();
+            String val15 = txt_job.getText();
+            String val16 = txt_doj.getText();
+            
+            String sql = "update Staff_information set id = '" + val4 + "', first_name = '" + val + "', surname = '" + val2 + "', "
+                        + "dob = '" + val3 + "', Email = '" + val5 + "', Telephone = '" + val6 + "', "
+                        + "Address = '" + val7 + "', Department = '" + val8 + "', Address2 ='" + val9 + "', "
+                        + "Apartment = '" + val10 +"', Post_code = '" + val11 + "', Designation = '" + val12 + "', "
+                        + "Status = '" + val13 + "', Salary = '" + val14 + "', job_title = '" + val15 + "', "
+                        + "Date_Hired = '" + val16 + "' where id = '" + val4 + "'";
+            
+            pst = conn.prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Datensatz Aktualisiert");
+            
+        } catch(Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        } finally {
+            try {
+                
+            } catch (Exception e) {
+                
+            }
+        }
+        
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -686,6 +746,7 @@ public class addEmployee extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
