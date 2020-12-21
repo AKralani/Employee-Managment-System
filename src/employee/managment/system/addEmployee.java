@@ -425,7 +425,11 @@ public class addEmployee extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        try {
+        int x = JOptionPane.showConfirmDialog(null, "Sind Sie sicher, dass Sie einen Datensatz hinzufügen möchten?", "Datensatz hinzufügen", JOptionPane.YES_NO_OPTION);
+        
+        if (x == 0) {
+        
+            try {
                 String sql = "insert into Staff_information " 
                         + "(first_name,surname,Dob,Email,"
                         + "Telephone,Address,Department,"
@@ -457,7 +461,7 @@ public class addEmployee extends javax.swing.JFrame {
                 
 
                 pst.execute();
-                JOptionPane.showMessageDialog(null,"Data is saved successfully");
+                JOptionPane.showMessageDialog(null,"Daten werden erfolgreich gespeichert");
 
             }
             catch (Exception e)
@@ -474,9 +478,10 @@ public class addEmployee extends javax.swing.JFrame {
 
                 }
                  catch(Exception e) {
-                   JOptionPane.showMessageDialog(null,e);
+                   //JOptionPane.showMessageDialog(null,e);
                 }
-         }
+            }
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void r_maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_r_maleActionPerformed
@@ -636,7 +641,11 @@ public class addEmployee extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         
-        try{
+        int x = JOptionPane.showConfirmDialog(null, "Sind Sie sicher, dass Sie den Datensatz löschen möchten?", "Aufzeichnung löschen", JOptionPane.YES_NO_OPTION);
+        
+        if (x == 0) {
+        
+            try {
                 String sql = "delete from Staff_information where id=? ";
                 pst = conn.prepareStatement(sql);
                 pst.setString(1, txt_id.getText());
@@ -658,51 +667,56 @@ public class addEmployee extends javax.swing.JFrame {
 
                 }
             }
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         
-        try {
-            
-            String val = txt_firstname.getText();
-            String val2 = txt_surname.getText();
-            String val3 = txt_dob.getText();
-            String val4 = txt_id.getText();
-            String val5 = txt_email.getText();
-            String val6 = txt_tel.getText();
-            String val7 = txt_address.getText();
-            String val8 = txt_dep.getText();
-            String val9 = txt_add2.getText();
-            String val10 = txt_apt.getText();
-            String val11 = txt_pc.getText();
-            String val12 = txt_design.getText();
-            String val13 = txt_status.getText();
-            String val14 = txt_salary.getText();
-            String val15 = txt_job.getText();
-            String val16 = txt_doj.getText();
-            
-            String sql = "update Staff_information set id = '" + val4 + "', first_name = '" + val + "', surname = '" + val2 + "', "
-                        + "dob = '" + val3 + "', Email = '" + val5 + "', Telephone = '" + val6 + "', "
-                        + "Address = '" + val7 + "', Department = '" + val8 + "', Address2 ='" + val9 + "', "
-                        + "Apartment = '" + val10 +"', Post_code = '" + val11 + "', Designation = '" + val12 + "', "
-                        + "Status = '" + val13 + "', Salary = '" + val14 + "', job_title = '" + val15 + "', "
-                        + "Date_Hired = '" + val16 + "' where id = '" + val4 + "'";
-            
-            pst = conn.prepareStatement(sql);
-            pst.execute();
-            JOptionPane.showMessageDialog(null, "Datensatz Aktualisiert");
-            
-        } catch(Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        } finally {
+        int x = JOptionPane.showConfirmDialog(null, "Sind Sie sicher, dass Sie den Datensatz aktualisieren möchten?", "Datensatz aktualisieren", JOptionPane.YES_NO_OPTION);
+        
+        if (x == 0) {
+        
             try {
-                
-            } catch (Exception e) {
-                
+
+                String val = txt_firstname.getText();
+                String val2 = txt_surname.getText();
+                String val3 = txt_dob.getText();
+                String val4 = txt_id.getText();
+                String val5 = txt_email.getText();
+                String val6 = txt_tel.getText();
+                String val7 = txt_address.getText();
+                String val8 = txt_dep.getText();
+                String val9 = txt_add2.getText();
+                String val10 = txt_apt.getText();
+                String val11 = txt_pc.getText();
+                String val12 = txt_design.getText();
+                String val13 = txt_status.getText();
+                String val14 = txt_salary.getText();
+                String val15 = txt_job.getText();
+                String val16 = txt_doj.getText();
+
+                String sql = "update Staff_information set id = '" + val4 + "', first_name = '" + val + "', surname = '" + val2 + "', "
+                            + "dob = '" + val3 + "', Email = '" + val5 + "', Telephone = '" + val6 + "', "
+                            + "Address = '" + val7 + "', Department = '" + val8 + "', Address2 ='" + val9 + "', "
+                            + "Apartment = '" + val10 +"', Post_code = '" + val11 + "', Designation = '" + val12 + "', "
+                            + "Status = '" + val13 + "', Salary = '" + val14 + "', job_title = '" + val15 + "', "
+                            + "Date_Hired = '" + val16 + "' where id = '" + val4 + "'";
+
+                pst = conn.prepareStatement(sql);
+                pst.execute();
+                JOptionPane.showMessageDialog(null, "Datensatz Aktualisiert");
+
+            } catch(Exception e) {
+                JOptionPane.showMessageDialog(null, e);
+            } finally {
+                try {
+
+                } catch (Exception e) {
+
+                }
             }
         }
-        
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
