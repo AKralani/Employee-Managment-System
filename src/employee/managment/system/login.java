@@ -162,13 +162,15 @@ public class login extends javax.swing.JFrame {
                 
                 int id = rs.getInt(1);
                 Emp.empId = id;
+                String username = rs.getString("username");
+                Emp.empname = username;
                 count = count + 1;
                 
             }
             
             if(count==1) {
                 
-                JOptionPane.showMessageDialog(null,"Erfolg" );
+                JOptionPane.showMessageDialog(null, "Erfolg" );
                 MainMenu j = new MainMenu();
                 j.setVisible(true);
                 this.dispose();
