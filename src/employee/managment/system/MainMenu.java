@@ -163,6 +163,41 @@ public class MainMenu extends javax.swing.JFrame {
         x.setVisible(true);
         this.dispose();
         
+        try {
+            
+                Date currentDate = GregorianCalendar.getInstance().getTime();
+                DateFormat df = DateFormat.getDateInstance();
+                String dateString = df.format(currentDate);
+                
+                Date d = new Date();
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                String timeString = sdf.format(d);
+                
+                String value0 = timeString;
+                String values = dateString;
+                
+                int value = Emp.empId;
+                
+                String reg = "insert into Audit (emp_id, date, status) values ('" + value + "', '" + value0 + " / " + values + "', 'Abgemeldet')";
+                pst = conn.prepareStatement(reg);
+                pst.execute();
+                this.dispose();
+            
+        } catch (Exception e) {
+            
+        } finally {
+            
+            try {
+                
+                rs.close();
+                pst.close();
+                
+            } catch (Exception e) {
+                
+            }
+            
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
