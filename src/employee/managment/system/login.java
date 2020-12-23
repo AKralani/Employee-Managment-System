@@ -7,6 +7,7 @@ package employee.managment.system;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
@@ -100,6 +101,12 @@ public class login extends javax.swing.JFrame {
         jLabel7.setText("Passwort:");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(10, 450, 60, 14);
+
+        txt_username.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_usernameKeyPressed(evt);
+            }
+        });
         jPanel1.add(txt_username);
         txt_username.setBounds(90, 400, 230, 30);
 
@@ -111,6 +118,12 @@ public class login extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1);
         jButton1.setBounds(220, 480, 100, 30);
+
+        txt_password.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_passwordKeyPressed(evt);
+            }
+        });
         jPanel1.add(txt_password);
         txt_password.setBounds(90, 440, 230, 30);
 
@@ -218,6 +231,168 @@ public class login extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txt_passwordKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_passwordKeyPressed
+        // TODO add your handling code here:
+        
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER)
+        {
+            
+          String sql = "select id, username, password from Users where (username = ? and password = ?)";
+        
+            try {
+
+                int count = 0;
+
+                pst = conn.prepareStatement(sql);
+
+                pst.setString(1, txt_username.getText());
+                pst.setString(2, txt_password.getText());
+
+                rs = pst.executeQuery();
+
+                while (rs.next()) {
+
+                    int id = rs.getInt(1);
+                    Emp.empId = id;
+                    String username = rs.getString("username");
+                    Emp.empname = username;
+                    count = count + 1;
+
+                }
+
+                if(count==1) {
+
+                    JOptionPane.showMessageDialog(null, "Erfolg" );
+                    MainMenu j = new MainMenu();
+                    j.setVisible(true);
+                    this.dispose();
+
+                    Date currentDate = GregorianCalendar.getInstance().getTime();
+                    DateFormat df = DateFormat.getDateInstance();
+                    String dateString = df.format(currentDate);
+
+                    Date d = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                    String timeString = sdf.format(d);
+
+                    String value0 = timeString;
+                    String values = dateString;
+
+                    int value = Emp.empId;
+
+                    String reg = "insert into Audit (emp_id, date, status) values ('" + value + "', '" + value0 + " / " + values + "', 'Eingeloggt')";
+                    pst = conn.prepareStatement(reg);
+                    pst.execute();
+                    this.dispose();
+
+                }
+
+                else {
+                    
+                    JOptionPane.showMessageDialog(null, "Benutzername und Passwort sind nicht korrekt");
+                    
+                }
+
+            } catch (Exception e) {
+
+                JOptionPane.showMessageDialog(null, e);
+
+            }
+            finally {
+
+                try {
+                    
+                    rs.close();
+                    pst.close();
+
+                } catch (Exception e) {
+
+                }
+            }
+        }
+    }//GEN-LAST:event_txt_passwordKeyPressed
+
+    private void txt_usernameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_usernameKeyPressed
+        // TODO add your handling code here:
+        
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER)
+        {
+            
+          String sql = "select id, username, password from Users where (username = ? and password = ?)";
+        
+            try {
+
+                int count = 0;
+
+                pst = conn.prepareStatement(sql);
+
+                pst.setString(1, txt_username.getText());
+                pst.setString(2, txt_password.getText());
+
+                rs = pst.executeQuery();
+
+                while (rs.next()) {
+
+                    int id = rs.getInt(1);
+                    Emp.empId = id;
+                    String username = rs.getString("username");
+                    Emp.empname = username;
+                    count = count + 1;
+
+                }
+
+                if(count==1) {
+
+                    JOptionPane.showMessageDialog(null, "Erfolg" );
+                    MainMenu j = new MainMenu();
+                    j.setVisible(true);
+                    this.dispose();
+
+                    Date currentDate = GregorianCalendar.getInstance().getTime();
+                    DateFormat df = DateFormat.getDateInstance();
+                    String dateString = df.format(currentDate);
+
+                    Date d = new Date();
+                    SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+                    String timeString = sdf.format(d);
+
+                    String value0 = timeString;
+                    String values = dateString;
+
+                    int value = Emp.empId;
+
+                    String reg = "insert into Audit (emp_id, date, status) values ('" + value + "', '" + value0 + " / " + values + "', 'Eingeloggt')";
+                    pst = conn.prepareStatement(reg);
+                    pst.execute();
+                    this.dispose();
+
+                }
+
+                else {
+                    
+                    JOptionPane.showMessageDialog(null, "Benutzername und Passwort sind nicht korrekt");
+                    
+                }
+
+            } catch (Exception e) {
+
+                JOptionPane.showMessageDialog(null, e);
+
+            }
+            finally {
+
+                try {
+                    
+                    rs.close();
+                    pst.close();
+
+                } catch (Exception e) {
+
+                }
+            }
+        }        
+    }//GEN-LAST:event_txt_usernameKeyPressed
 
     /**
      * @param args the command line arguments
