@@ -610,8 +610,12 @@ public class addEmployee extends javax.swing.JFrame {
                 String add17 = rs.getString("Designation");
                 txt_design.setText(add17);
           
-
-                
+                String add18 = rs.getString("Gender");
+                if (add18.equals("Male")) {
+                    r_male.setSelected(true);
+                } else {
+                    r_female.setSelected(true);
+                }
                 
                 byte[] image = rs.getBytes("Image");
                 ImageIcon imageIcon = new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(img.getWidth(), img.getHeight(), Image.SCALE_SMOOTH));
@@ -699,7 +703,7 @@ public class addEmployee extends javax.swing.JFrame {
                 + "Address = '" + val7 + "', Department = '" + val8 + "', Address2 ='" + val9 + "', "
                 + "Apartment = '" + val10 +"', Post_code = '" + val11 + "', Designation = '" + val12 + "', "
                 + "Status = '" + val13 + "', Salary = '" + val14 + "', job_title = '" + val15 + "', "
-                + "Date_Hired = '" + val16 + "' where id = '" + val4 + "'";
+                + "Date_Hired = '" + val16 + "', Gender = '" + gender + "', Image = ? where id = '" + val4 + "'";
 
                 pst = conn.prepareStatement(sql);
                 pst.execute();
