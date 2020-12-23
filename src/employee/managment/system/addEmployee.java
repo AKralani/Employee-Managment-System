@@ -669,6 +669,8 @@ public class addEmployee extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        
+        String val4 = txt_id.getText();
 
         int x = JOptionPane.showConfirmDialog(null, "Sind Sie sicher, dass Sie den Datensatz aktualisieren möchten?", "Datensatz aktualisieren", JOptionPane.YES_NO_OPTION);
 
@@ -679,7 +681,6 @@ public class addEmployee extends javax.swing.JFrame {
                 String val = txt_firstname.getText();
                 String val2 = txt_surname.getText();
                 String val3 = txt_dob.getText();
-                String val4 = txt_id.getText();
                 String val5 = txt_email.getText();
                 String val6 = txt_tel.getText();
                 String val7 = txt_address.getText();
@@ -706,7 +707,31 @@ public class addEmployee extends javax.swing.JFrame {
 
             } catch(Exception e) {
                 JOptionPane.showMessageDialog(null, e);
-            } finally {
+                
+            } 
+            
+            try {
+                
+                File file = new File(filename);
+                FileInputStream fis = new FileInputStream(file);
+                byte [] image = new byte[(int) file.length()];
+                fis.read(image);
+                
+                String sql = "update Staff_information SET Image = ? where id = '" + val4 + "'";
+                
+                pst = conn.prepareStatement(sql);
+                pst.setBytes(1, image);
+                pst.executeUpdate();
+                pst.close();
+                
+            } catch (Exception e) {
+                
+                JOptionPane.showMessageDialog(null, e);
+                
+            }
+            
+            finally {
+                
                 try {
 
                 } catch (Exception e) {
